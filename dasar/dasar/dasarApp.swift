@@ -11,7 +11,7 @@ import SwiftUI
 struct dasarApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListDemo()
         }
     }
 }
