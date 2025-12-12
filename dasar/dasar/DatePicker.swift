@@ -16,6 +16,14 @@ struct DatePickerDemo: View {
     
     let ending: Date = .now
     
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        
+        return formatter
+    }
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -26,7 +34,7 @@ struct DatePickerDemo: View {
                 
                 HStack{
                     Text("Date: ")
-                    Text("\(selectedDate)")
+                    Text("\(dateFormatter.string(from: selectedDate))")
                 }
             }
             
